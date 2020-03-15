@@ -6,6 +6,8 @@ let coffeeStatus = "waiting";
 let progressBar = document.querySelector('.progress');
 let progressBarInner = document.querySelector('.progress-bar');
 
+
+// Приготовление купюр
 for(let i = 0; i < coffeeButtons.length; i++) {
 	coffeeButtons[i].onclick = buyCoffee;
 }
@@ -65,5 +67,48 @@ function getCoffee() {
 	progressBar.classList.add("d-none");
 	progressBarInner.style.width = 0;
 	coffeeStatus = "waiting";
+
+}
+
+// Drag'n'Drop купюр
+
+let bills = document.querySelectorAll('.wallet img');
+
+for(let i = 0; i< bills.length; i++) {
+	bills[i].onmousedown = takeMoney;
+}
+
+function takeMoney(e) {
+	e.preventDefault();
+
+	let bill = this;
+
+	bill.style.position = "absolute";
+	bill.style.transform = "rotate(90deg)";
+
+	let billWidth = bill.getBoundingClientRect().width;
+	let billHeight = bill.getBoundingClientRect().height;
+		
+	bill.style.top = e.clientY - billWidth/2 + 'px';
+	bill.style.left = e.clientX - billHeight/2 + 'px';
+
+	window.onmousemove = (e) => {
+		bill.style.left = e.clientX - billHeight/2 + 'px';
+		bill.style.top = e.clientY - billWidth/2 + 'px';
+	}
+
+	bill.onmouseup = insertMoney;
+}
+
+function insertMoney() {
+	window.onmousemove = null;
+
+	let atm = document.querySelector('.coffee-atm');
+
+	let bill = this;
+	let billCost = +bill.getAttribute("value");
+
+	let atmCoords = atm.getBoundingClientRect();
+	let billCoords = bill.getBoundingClientRect();
 
 }

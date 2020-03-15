@@ -20,15 +20,15 @@
               <img src="img/americano.png" alt="Американо">
               <span>Американо - 60 руб.</span>
             </div>
-           <div class="coffee-item" cost="120">
+            <div class="coffee-item" cost="120">
               <img src="img/cappuccino.png" alt="Капучино">
               <span>Капучино - 120 руб.</span>
             </div>
-           <div class="coffee-item" cost="83">
+            <div class="coffee-item" cost="83">
               <img src="img/espresso.png" alt="Эспрессо">
               <span>Эспрессо - 83 руб.</span>
             </div>
-           <div class="coffee-item" cost="94">
+            <div class="coffee-item" cost="94">
               <img src="img/latte.jpg" alt="Латте">
               <span>Латте - 94 руб.</span>
             </div>
@@ -61,8 +61,14 @@
               </div>
               <button class="btn btn-block btn-primary mt-2">Получить сдачу</button>
               <div class="coffee-change mt-2"></div>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="row wallet mt-2">
+        <img src="img/50rub.jpg" alt="" value="50">
+        <img src="img/100rub.jpg" alt="" value="100">
+        <img src="img/500rub.jpg" alt="" value="500">
       </div>
     </div>
 

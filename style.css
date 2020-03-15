@@ -72,3 +72,8 @@
 	min-height: 100px;
 }
 
+.wallet img {
+	display: inline-block;
+	width: 200px;
+	cursor: pointer;
+}
