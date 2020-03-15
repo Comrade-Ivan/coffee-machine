@@ -16,37 +16,51 @@
       <div class="row coffee-machine">
         <div class="col-6">
           <div class="row coffee-list flex-column justify-content-around p-3">
-            <div class="coffee-item p-2">
+            <div class="coffee-item">
               <img src="img/americano.png" alt="americano">
               <span>Американо - 60 руб.</span>
             </div>
-           <div class="coffee-item p-2">
+           <div class="coffee-item">
               <img src="img/cappuccino.png" alt="cappuccino">
               <span>Капучино - 120 руб.</span>
             </div>
-           <div class="coffee-item p-2">
+           <div class="coffee-item">
               <img src="img/espresso.png" alt="espresso">
               <span>Эспрессо - 83 руб.</span>
             </div>
-           <div class="coffee-item p-2">
+           <div class="coffee-item">
               <img src="img/latte.jpg" alt="latte">
               <span>Латте - 94 руб.</span>
             </div>
           </div>
         </div>
         <div class="col-6">
-          <div class="row coffee-operation">
+          <div class="row coffee-operation p-3">
             <div class="col-6">
-              <div class="display"></div>
-              <div class="coffee-cup"></div>
+              <div class="display p-2">
+                <p class="display-text mt-2">Выберите кофе</p>
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="coffee-cup mt-2 p-3">
+                <img src="img/americano.png" alt="">
+              </div>
             </div>
             <div class="col-6">
-              <div class="coffee-balance"></div>
-              <div class="coffee-atm"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 coffee-change"></div>
+              <div class="coffee-balance">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Баланс" aria-label="Имя получателя" aria-describedby="basic-addon2">
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">руб.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="coffee-atm mt-2">
+                <img src="img/bill_acc.png" alt="">
+              </div>
+              <button class="btn btn-block btn-primary mt-2">Получить сдачу</button>
+              <div class="coffee-change mt-2"></div>
           </div>
         </div>
       </div>
