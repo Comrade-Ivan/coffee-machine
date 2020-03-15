@@ -97,18 +97,48 @@ function takeMoney(e) {
 		bill.style.top = e.clientY - billWidth/2 + 'px';
 	}
 
-	bill.onmouseup = insertMoney;
+	bill.onmouseup = dropMoney;
 }
 
-function insertMoney() {
+function dropMoney() {
 	window.onmousemove = null;
 
-	let atm = document.querySelector('.coffee-atm');
+	
 
 	let bill = this;
 	let billCost = +bill.getAttribute("value");
 
+	if( inAtm(bill) ) {
+		bill.remove();
+		balance.value = +balance.value + billCost;
+	} 
+
+}
+
+function inAtm(bill) {
+	let atm = document.querySelector('.coffee-atm');
 	let atmCoords = atm.getBoundingClientRect();
 	let billCoords = bill.getBoundingClientRect();
+
+	let atmLeftTopCornerX = atmCoords.x;
+	let atmLeftTopCornerY = atmCoords.y;
+	let atmRightTopCornerX = atmCoords.x + atmCoords.width;
+	let atmRightTopCornerY = atmCoords.y;
+	let atmLeftBottomCornerX = atmCoords.x;
+	let atmLeftBottomCornerY = atmCoords.y + atmCoords.height/3;
+	let atmRightBottomCornerX = atmCoords.x + atmCoords.width;
+	let atmRightBottomCornerY = atmCoords.y + atmCoords.height/3;
+
+	let billLeftCornerX = billCoords.x;
+	let billLeftCornerY = billCoords.y;
+	let billRigthCornerX = billCoords.x + billCoords.width;
+	let billRigthCornerY = billCoords.y;
+
+	if (billLeftCornerX > atmLeftTopCornerX && billLeftCornerY > atmLeftTopCornerY && billRigthCornerX < atmRightTopCornerX && billLeftCornerY < atmLeftBottomCornerY) {
+		return true;
+	} else {
+		return false;
+	}
+
 
 }
