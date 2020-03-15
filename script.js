@@ -1,3 +1,5 @@
+"use strict"
+
 let coffeeButtons = document.querySelectorAll('.coffee-item');
 let balance = document.querySelector('.coffee-balance input');
 let displayText = document.querySelector('.display-text');
@@ -7,7 +9,7 @@ let progressBar = document.querySelector('.progress');
 let progressBarInner = document.querySelector('.progress-bar');
 
 
-// Приготовление купюр
+//------------------ Приготовление кофе --------------------------
 for(let i = 0; i < coffeeButtons.length; i++) {
 	coffeeButtons[i].onclick = buyCoffee;
 }
@@ -69,8 +71,8 @@ function getCoffee() {
 	coffeeStatus = "waiting";
 
 }
-
-// Drag'n'Drop купюр
+//----------------------------------------------------------------
+//-------------------- Drag'n'Drop купюр -------------------------
 
 let bills = document.querySelectorAll('.wallet img');
 
@@ -142,8 +144,8 @@ function inAtm(bill) {
 
 
 }
-
-//Сдача монетками
+//----------------------------------------------------------------
+//-----------------------Сдача монетками--------------------------
 
 let changeBtn = document.querySelector('.change-btn');
 changeBtn.onclick = getChange;
@@ -214,3 +216,5 @@ function tossCoin(value) {
 	};
 
 }
+
+//----------------------------------------------------------------
