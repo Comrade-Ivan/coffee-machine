@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
+      <div class="row coffee-machine">
         <div class="col-6">
           <div class="row coffee-list flex-column justify-content-around">
             <div class="col coffee-item"></div>
