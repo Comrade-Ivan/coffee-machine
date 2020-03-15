@@ -15,11 +15,23 @@
     <div class="container">
       <div class="row coffee-machine">
         <div class="col-6">
-          <div class="row coffee-list flex-column justify-content-around">
-            <div class="col coffee-item"></div>
-            <div class="col coffee-item"></div>
-            <div class="col coffee-item"></div>
-            <div class="col coffee-item"></div>
+          <div class="row coffee-list flex-column justify-content-around p-3">
+            <div class="coffee-item p-2">
+              <img src="img/americano.png" alt="americano">
+              <span>Американо - 60 руб.</span>
+            </div>
+           <div class="coffee-item p-2">
+              <img src="img/cappuccino.png" alt="cappuccino">
+              <span>Капучино - 120 руб.</span>
+            </div>
+           <div class="coffee-item p-2">
+              <img src="img/espresso.png" alt="espresso">
+              <span>Эспрессо - 83 руб.</span>
+            </div>
+           <div class="coffee-item p-2">
+              <img src="img/latte.jpg" alt="latte">
+              <span>Латте - 94 руб.</span>
+            </div>
           </div>
         </div>
         <div class="col-6">

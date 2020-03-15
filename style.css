@@ -1,0 +1,33 @@
+.coffee-machine {
+	border: 3px solid black;
+	margin-top: 50px;
+}
+
+.coffee-list {
+	background-image: url('img/background.jpg');
+	background-size: cover;
+	min-height: 400px;
+}
+
+.coffee-item {
+	background-color: rgba(0,0,0,.7);
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.coffee-item img {
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+}
+
+.coffee-item span {
+	color: white;
+	margin-left: 15px;
+}
+
+.coffee-operation {
+	background-color: lightgrey;
+	height: 100%;
+}
+
