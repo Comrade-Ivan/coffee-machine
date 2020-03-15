@@ -14,37 +14,37 @@
   <body>
     <div class="container">
       <div class="row coffee-machine">
-        <div class="col-6">
+        <div class="col-5">
           <div class="row coffee-list flex-column justify-content-around p-3">
-            <div class="coffee-item">
-              <img src="img/americano.png" alt="americano">
+            <div class="coffee-item" cost="60">
+              <img src="img/americano.png" alt="Американо">
               <span>Американо - 60 руб.</span>
             </div>
-           <div class="coffee-item">
-              <img src="img/cappuccino.png" alt="cappuccino">
+           <div class="coffee-item" cost="120">
+              <img src="img/cappuccino.png" alt="Капучино">
               <span>Капучино - 120 руб.</span>
             </div>
-           <div class="coffee-item">
-              <img src="img/espresso.png" alt="espresso">
+           <div class="coffee-item" cost="83">
+              <img src="img/espresso.png" alt="Эспрессо">
               <span>Эспрессо - 83 руб.</span>
             </div>
-           <div class="coffee-item">
-              <img src="img/latte.jpg" alt="latte">
+           <div class="coffee-item" cost="94">
+              <img src="img/latte.jpg" alt="Латте">
               <span>Латте - 94 руб.</span>
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-7">
           <div class="row coffee-operation p-3">
             <div class="col-6">
               <div class="display p-2">
                 <p class="display-text mt-2">Выберите кофе</p>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                <div class="progress d-none">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                 </div>
               </div>
               <div class="coffee-cup mt-2 p-3">
-                <img src="img/americano.png" alt="">
+                <img class="d-none" src="img/americano.png" alt="">
               </div>
             </div>
             <div class="col-6">
