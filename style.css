@@ -70,10 +70,12 @@
 	border: 3px solid black;
 	width: 100%;
 	min-height: 100px;
+	position: relative;
 }
 
 .wallet img {
 	display: inline-block;
 	width: 200px;
 	cursor: pointer;
+	user-select: none;
 }

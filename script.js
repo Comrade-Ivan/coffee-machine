@@ -142,3 +142,75 @@ function inAtm(bill) {
 
 
 }
+
+//Сдача монетками
+
+let changeBtn = document.querySelector('.change-btn');
+changeBtn.onclick = getChange;
+
+function getChange() {
+	if(balance.value <= 0) {
+		return;
+	}
+
+	if(balance.value - 10 > 0) {
+		balance.value -= 10;
+		tossCoin('10');
+		return getChange();
+	} 
+	else if(balance.value - 5 > 0) {
+		balance.value -= 5;
+		tossCoin('5');
+		return getChange();
+	}
+	else if (balance.value - 2 > 0) {
+		balance.value -= 2;
+		tossCoin('2');
+		return getChange();
+	}
+	else {
+		balance.value -= 1;
+		tossCoin('1');
+		return getChange();
+	}
+}
+
+function tossCoin(value) {
+	let changeContainer = document.querySelector('.coffee-change')
+	let changeContainerWidth = changeContainer.getBoundingClientRect().width;
+	let changeContainerHeight = changeContainer.getBoundingClientRect().height;
+	let coinSrc = "";
+	switch (value) {
+		case "10":
+			coinSrc = "img/10rub.png";
+			break;
+		case "5":
+			coinSrc = "img/5rub.png";
+			break;
+		case "2":
+			coinSrc = "img/2rub.png";
+			break;
+		case "1":
+			coinSrc = "img/1rub.png";
+			break;
+	}
+
+	let coin = document.createElement('img');
+	coin.setAttribute('src',coinSrc);
+	coin.style.height = "50px";
+	coin.style.width = "50px";
+	coin.style.cursor = "pointer";
+	coin.style.display = "inline-block";
+	coin.style.position = "absolute";
+	coin.style.userSelect = "none";
+
+	changeContainer.append(coin);
+
+	coin.style.top = Math.round(Math.random() * (changeContainerHeight - 53)) + "px";
+	coin.style.left = Math.round(Math.random() * (changeContainerWidth - 53)) + "px";
+
+	coin.onclick = (e) => {
+		coin.remove()
+	};
+
+}

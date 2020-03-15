@@ -59,7 +59,7 @@
               <div class="coffee-atm mt-2">
                 <img src="img/bill_acc.png" alt="">
               </div>
-              <button class="btn btn-block btn-primary mt-2">Получить сдачу</button>
+              <button class="btn btn-block btn-primary mt-2 change-btn">Получить сдачу</button>
               <div class="coffee-change mt-2"></div>
             </div>
           </div>
