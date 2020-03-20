@@ -136,7 +136,12 @@ function inAtm(bill) {
 	let billRigthCornerX = billCoords.x + billCoords.width;
 	let billRigthCornerY = billCoords.y;
 
-	if (billLeftCornerX > atmLeftTopCornerX && billLeftCornerY > atmLeftTopCornerY && billRigthCornerX < atmRightTopCornerX && billLeftCornerY < atmLeftBottomCornerY) {
+	if (
+	  billLeftCornerX > atmLeftTopCornerX && 
+	  billLeftCornerY > atmLeftTopCornerY && 
+	  billRigthCornerX < atmRightTopCornerX && 
+	  billLeftCornerY < atmLeftBottomCornerY
+	  ) {
 		return true;
 	} else {
 		return false;
